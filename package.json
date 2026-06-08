@@ -1,0 +1,9 @@
+{
+  "name": "allure-pools-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Contact form email endpoint for Allure Pools — sends branded email via Resend.",
+  "engines": {
+    "node": ">=18"
+  }
+}
