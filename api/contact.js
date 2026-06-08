@@ -131,9 +131,9 @@ module.exports = async (req, res) => {
 
     const data = await resp.json().catch(() => ({}));
     if (!resp.ok) {
-      return res.status(502).json({ success: false, message: 'Email service error.', detail: data });
+      return res.status(502).json({ success: false, message: 'Email service error.', detail: data, from: fromEmail, to: toEmail });
     }
-    return res.status(200).json({ success: true });
+    return res.status(200).json({ success: true, id: (data && data.id) || null, from: fromEmail, to: toEmail });
   } catch (err) {
     return res.status(500).json({ success: false, message: err.message || 'Unexpected error.' });
   }
