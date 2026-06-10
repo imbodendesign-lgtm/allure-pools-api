@@ -111,7 +111,7 @@ module.exports = async (req, res) => {
     }
 
     const fromEmail = process.env.FROM_EMAIL || 'Allure Pools <onboarding@resend.dev>';
-    const toEmail = 'imbodendesign@gmail.com';
+    const toEmail = 'allurepools@gmail.com';
     const subject = 'New Pool Quote Request — ' + d.name + (d.area ? ' (' + d.area + ')' : '');
 
     const resp = await fetch('https://api.resend.com/emails', {
